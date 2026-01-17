@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block title %}
+Find My Worker
+{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/search_styles.css' %}">
+{% endblock %}
+{% block content %}
+<div class="container-form">
+    <h1>Search Workers by Pincode</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" >Search</button>
+    </form>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+</div>
+<div class="results" >
+
+    {% if workers %}
+
+        {% for worker in workers %}
+        <div class="card">
+            <div class="card-img">
+                {% if worker.photo %}
+                    <img src="{{ worker.photo.url }}" alt="Worker Photo">
+                {% endif %}
+            </div>
+            <div class="desc">
+                <h6 class="primary-text">{{ worker.name }}</h6>
+                <h6 class="secondary-text">{{ worker.work_type }}</h6>
+            </div>
+            <button class="primary-text View-profile">
+                <a href="{% url 'worker_dashboard' worker.id %}">View Profile</a>
+            </button>
+            <div class="details">
+                <div class="rating">
+                    <h6 class="primary-text"> {{worker.experience}} Years </h6>
+                    <h6 class="secondary-text"> Experience </h6>
+                </div>
+                <div class="activity">
+                    <h6 class="primary-text"> {{worker.landmark}} </h6>
+                    <h6 class="secondary-text"> Landmark </h6>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    {% endif %}
+</div>
+{% endblock %}

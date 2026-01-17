@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href={% static 'css/style_contactus.css' %}>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Find My Worker</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo transition-transform">
+                <a href="{% url 'home' %}" class="logo-img"><img src="{% static 'photos/Photoroom-20241012_161825.png' %}" alt=""
+                        class="logo-pic"></a>
+            </div>
+            <div class="name transition-transform">
+                <a href="{% url 'home' %}" class="name-img"><img src="{% static 'photos/fmy_transparentcopy.png' %}" alt="" class="name-pic"></a>
+            </div>
+            <div class="home-tab transition-transform">
+                <a href="{% url 'home' %}" class="home-image">
+                    <i class="fa-solid fa-house"><span class="home-tab-text">Home</span></i>
+                </a>
+            </div>
+            <div class="customer-tab transition-transform">
+                <a href="{% url 'search_workers' %}" class="customer-image">
+                    <i class="fa-solid fa-user"><span class="customer-tab-text">Customer</span></i>
+                </a>
+            </div>
+            <div class="worker-tab transition-transform">
+                <a href="{% url 'register' %}" class="worker-image">
+                    <i class="fa-solid fa-briefcase"><span class="worker-tab-text">Worker</span></i>
+                </a>
+            </div>
+            <div class="aboutus-tab transition-transform">
+                <a href={% url "about_us" %} target="_blank" class="aboutus-image">
+                    <i class="fa-solid fa-circle-info"><span class="aboutus-tab-text">About Us</span></i>
+                </a>
+            </div>
+            <div class="contactus-tab transition-transform">
+                <a href={% url "contact_us" %} target="_blank" class="contactus-image">
+                    <i class="fa-solid fa-circle-question"><span class="contactus-tab-text">Contact Us</span></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <div class="Contact">
+        <div class="container">
+            <div class="form-container">
+              <div class="left-container">
+                <div class="left-inner-container">
+                <h2>Let's Chat</h2>
+                <p>Whether you have a question, want to start a project or            simply want to connect.</p>
+                  <br>
+                  <p>Feel free to send me a message in the contact form</p>
+              </div>
+                </div>
+              <div class="right-container">
+                <div class="right-inner-container">
+                  <form action="#">
+                      <h2 class="lg-view">Contact</h2>
+                <h2 class="sm-view">Let's Chat</h2>
+                     <p>* Required</p>
+                    <input type="text" placeholder="Name *"  />
+                <input type="email" placeholder="Email *" />
+                      <input type="text" placeholder="Company" />
+                      <input type="phone" placeholder="Phone" />
+                    <textarea rows="4" placeholder="Message"></textarea>
+                      <button>Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="fmy-logo">
+            <a href={% url "home" %} class="logo-img">
+                <img class="fmy-logo-img animate__animated animate__slideInRight" src={% static "photos/tred-Photoroom.png" %}
+                    alt="Find My Worker Logo"></a>
+        </div>
+    </div>
+    <footer>
+        <div class="nav-footer">
+            <div class="nav-aboutus nav-footeritems"><a href={% url "about_us" %} target="_blank" class="nav-aboutus-a nav-a">ABOUT US</a></div>
+            <div class="nav-customer  nav-footeritems"><a href={% url "search_workers" %} class="nav-customer-a nav-a">CUSTOMER</a></div>
+            <div class="nav-worker  nav-footeritems"><a href={% url "register" %} class="nav-worker-a nav-a">WORKER</a></div>
+            <div class="nav-help  nav-footeritems"><a href={% url "contact_us" %} class="nav-help-a nav-a">HELP</a></div>
+            <div class="nav-contact  nav-footeritems"><a href={% url "contact_us" %} target="_self" class="nav-contact-a nav-a">CONTACT US</a></div>
+        </div>
+        <hr class="line-foot">
+        <div class="cont-foot">
+            <div class="foot-fmy"></div>
+        </div>
+        <div class="nav-footer-icons">
+            <a href={% url "home" %} class="text-white me-4">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href={% url "home" %} class="text-white me-4">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href={% url "home" %} class="text-white me-4">
+                <i class="fab fa-google"></i>
+            </a>
+            <a href={% url "home" %} class="text-white me-4">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href={% url "home" %} class="text-white me-4">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href={% url "home" %} class="text-white me-4">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <div class="copyright">
+            <p class="para-foot">© 2024 COPYRIGHT    :   <a class="nav-a" href="homepage.html">FIND MY WORKER</a></p>
+        </div>
+    </footer>
+
+</body>

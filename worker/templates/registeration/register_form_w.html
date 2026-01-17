@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block title %}
+Find My Worker
+{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/layout_styles.css' %}">
+{% endblock %}
+{% block content %}
+<div class="container-form">
+    <h1>Worker Registration Form</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button>Register</button>
+    </form>
+    
+</div>
+{% endblock %}

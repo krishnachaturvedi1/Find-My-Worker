@@ -1,0 +1,179 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/layout_styles.css' %}">
+    {% endblock %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>
+        {% block title %}
+        Find My Worker
+        {% endblock %}
+    </title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo transition-transform">
+                <a href="{% url 'home' %}" class="logo-img"><img src="{% static 'photos/Photoroom-20241012_161825.png' %}" alt=""
+                        class="logo-pic"></a>
+            </div>
+            <div class="name transition-transform">
+                <a href="{% url 'home' %}" class="name-img"><img src="{% static 'photos/fmy_transparentcopy.png' %}" alt="" class="name-pic"></a>
+            </div>
+            <div class="home-tab transition-transform">
+                <a href="{% url 'home' %}" class="home-image">
+                    <i class="fa-solid fa-house"><span class="home-tab-text">Home</span></i>
+                </a>
+            </div>
+            <div class="customer-tab transition-transform">
+                <a href="{% url 'search_workers' %}" class="customer-image">
+                    <i class="fa-solid fa-user"><span class="customer-tab-text">Customer</span></i>
+                </a>
+            </div>
+            <div class="worker-tab transition-transform">
+                <a href="{% url 'register' %}" class="worker-image">
+                    <i class="fa-solid fa-briefcase"><span class="worker-tab-text">Worker</span></i>
+                </a>
+            </div>
+            <div class="aboutus-tab transition-transform">
+                <a href={% url "about_us" %} target="_blank" class="aboutus-image">
+                    <i class="fa-solid fa-circle-info"><span class="aboutus-tab-text">About Us</span></i>
+                </a>
+            </div>
+            <div class="contactus-tab transition-transform">
+                <a href={% url "contact_us" %} target="_blank" class="contactus-image">
+                    <i class="fa-solid fa-circle-question"><span class="contactus-tab-text">Contact Us</span></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+    {% block content %}
+    <div class="customer-worker-main">
+        <div class="customer-cont">
+            <a href={% url "search_workers" %} target="_blank" class="customer-dash-a">
+                <img class="customer-dash-img animate__animated animate__fadeInUp" src="{% static 'photos/clientimage_transparent.png' %}"
+                alt="">
+            </a>
+        </div>
+        <div class="worker-cont">
+            <a href={% url "register" %} target="_blank" class="worker-dash-a">
+                <img class="worker-dash-img animate__animated animate__fadeInUp" src="{% static 'photos/worker_logo_transparent.png' %}"
+                alt="">
+            </a>
+        </div>
+    </div>
+    <hr class="line-break">
+    <div class="fmy-intro-cont">
+        <div class="fmy-intro">
+            <p class="fmy-intro-p animate__animated animate__slideInLeft">
+                "Find My Worker" is a web-based job
+                finder and service provider platform that aims to address this issue by connecting users with workers in
+                their vicinity, using a pin-code-based filtering system.
+            </p>
+        </div>
+        <div class="fmy-logo">
+            <a href={% url "home" %} class="logo-img">
+                <img class="fmy-logo-img animate__animated animate__slideInRight" src="{% static 'photos/tred-Photoroom.png' %}"
+                alt="Find My Worker Logo"></a>
+            </div>
+        </div>
+        <div class="fmy-steps-cont">
+            <div class="container left">
+                <div class="fmy-steps-no log-in">Log in</div>
+                <i class="icon fa fa-home"></i>
+                <div class="content">
+                    <h2>Create Account</h2>
+                    <p>
+                        Create an account as a worker or customer.
+                    </p>
+                </div>
+            </div>
+            <div class="container right">
+                <div class="fmy-steps-no bro-ser">Browse Services</div>
+                <i class="icon fa fa-gift"></i>
+                <div class="content">
+                    <h2>Well Experienced Workers</h2>
+                    <p>
+                        Customers can browse a variety of services offered by skilled and experienced professionals.
+                    </p>
+                </div>
+            </div>
+            <div class="container left">
+                <div class="fmy-steps-no en-pin">Enter Pincode</div>
+                <i class="icon fa fa-user"></i>
+                <div class="content">
+                    <h2>Service Based on Locations</h2>
+                    <p>
+                        Choose the right worker based on ratings, reviews, & your specific needs using our Pin-Code-based
+                        filtering system.
+                    </p>
+                </div>
+            </div>
+            <div class="container right">
+                <div class="fmy-steps-no get-job">Get the Job Done</div>
+                <i class="icon fa fa-running"></i>
+                <div class="content">
+                    <h2>Workforce Wonders: Execution & Employment Excellence</h2>
+                    <p>
+                        Workers provide top-notch services, ensuring customer satisfaction.
+                    </p>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+    <footer>
+        <div class="nav-footer">
+            <div class="nav-aboutus nav-footeritems"><a href={% url "about_us" %} target="_blank" class="nav-aboutus-a nav-a">ABOUT US</a></div>
+            <div class="nav-customer  nav-footeritems"><a href={% url "search_workers" %} class="nav-customer-a nav-a">CUSTOMER</a></div>
+            <div class="nav-worker  nav-footeritems"><a href={% url "register" %} class="nav-worker-a nav-a">WORKER</a></div>
+            <div class="nav-help  nav-footeritems"><a href={% url "contact_us" %} class="nav-help-a nav-a">HELP</a></div>
+            <div class="nav-contact  nav-footeritems"><a href={% url "contact_us" %} target="_self" class="nav-contact-a nav-a">CONTACT US</a></div>
+        </div>
+        <hr class="line-foot">
+        <div class="cont-foot">
+            <div class="foot-fmy"></div>
+        </div>
+        <div class="nav-footer-icons">
+            <a href={% url "home" %} class="text-white me-4">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href={% url "home" %} class="text-white me-4">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href={% url "home" %} class="text-white me-4">
+                <i class="fab fa-google"></i>
+            </a>
+            <a href={% url "home" %} class="text-white me-4">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href={% url "home" %} class="text-white me-4">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href={% url "home" %} class="text-white me-4">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <div class="copyright">
+            <p class="para-foot">© 2024 COPYRIGHT    :   <a class="nav-a" href="homepage.html">FIND MY WORKER</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

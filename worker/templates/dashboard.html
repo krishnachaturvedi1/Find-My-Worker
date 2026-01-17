@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block title %}
+Worker Profile
+{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/profile_styles.css' %}">
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="profile-header">
+        {% if worker.photo %}
+            <img src="{{ worker.photo.url }}" alt="Worker Photo" class="dp">
+        {% endif %}
+        <div class="profile-details">
+            <h1 class="profile-details-name">{{ worker.name }}</h1>
+            <div class="profile-info">
+                <div class="profile-labels">
+                    <p><strong>Work Type:</strong></p>
+                    <p><strong>City:</strong></p>
+                    <p><strong>Landmark:</strong></p>
+                    <p><strong>Pin Code:</strong></p>
+                    <p><strong>Contact Number:</strong></p>
+                    <p><strong>Experience:</strong></p>
+                    <p><strong>Availability:</strong></p>
+                    <p><strong>Job Description:</strong></p>
+                </div>
+                <div class="profile-values">
+                    <p>{{ worker.work_type }}</p>
+                    <p>{{ worker.city }}</p>
+                    <p>{{ worker.landmark }}</p>
+                    <p>{{ worker.pin_code }}</p>
+                    <p>{{ worker.contact_number }}</p>
+                    <p>{{ worker.experience }} years</p>
+                    <p>{{ worker.availability }}</p>
+                    <p>{{ worker.job_description }}</p>
+                </div>
+            </div>
+            
+            <a href="{% url 'logout' %}" class="btn btn-danger">Logout</a>
+            <a href="{% url 'edit_worker' %}" class="btn btn-primary">Edit</a>
+            </div>
+            </div>
+            </div>
+            {% endblock %}
+

@@ -1,0 +1,147 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style_aboutus.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Find My Worker</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo transition-transform">
+                <a href="{% url 'home' %}" class="logo-img"><img src="{% static 'photos/Photoroom-20241012_161825.png' %}" alt=""
+                        class="logo-pic"></a>
+            </div>
+            <div class="name transition-transform">
+                <a href="{% url 'home' %}" class="name-img"><img src="{% static 'photos/fmy_transparentcopy.png' %}" alt="" class="name-pic"></a>
+            </div>
+            <div class="home-tab transition-transform">
+                <a href="{% url 'home' %}" class="home-image">
+                    <i class="fa-solid fa-house"><span class="home-tab-text">Home</span></i>
+                </a>
+            </div>
+            <div class="customer-tab transition-transform">
+                <a href="{% url 'search_workers' %}" class="customer-image">
+                    <i class="fa-solid fa-user"><span class="customer-tab-text">Customer</span></i>
+                </a>
+            </div>
+            <div class="worker-tab transition-transform">
+                <a href="{% url 'register' %}" class="worker-image">
+                    <i class="fa-solid fa-briefcase"><span class="worker-tab-text">Worker</span></i>
+                </a>
+            </div>
+            <div class="aboutus-tab transition-transform">
+                <a href={% url "about_us" %} target="_blank" class="aboutus-image">
+                    <i class="fa-solid fa-circle-info"><span class="aboutus-tab-text">About Us</span></i>
+                </a>
+            </div>
+            <div class="contactus-tab transition-transform">
+                <a href={% url "contact_us" %} target="_blank" class="contactus-image">
+                    <i class="fa-solid fa-circle-question"><span class="contactus-tab-text">Contact Us</span></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <div class="fmy-aboutnav-cont">
+        <div class="fmy-aboutnav">
+            <div class="content" id="about">
+                <h1>About Us</h1><br>
+                <p>Connecting skilled professionals with customers seeking quality services.</p><br>
+                <p><br>
+                <h3>Our Mission At Find My Worker</h3><br>
+                <p>Our mission is to revolutionize the way skilled professionals and customers connect. We believe in
+                    creating a platform that empowers workers to showcase their skills and customers to find reliable
+                    services with ease.</p><br>
+                <h2> What We Offer</h2>
+                <br>
+                <h3>Verified Professionals:</h3>
+                <p> We understand the importance of safety and trust. All our workers are thoroughly vetted and verified
+                    to ensure they meet our high standards.</p><br>
+                <h3>User-Friendly Platform:</h3><br>
+                <p> Our platform is designed with the user in mind, ensuring a seamless experience whether you're
+                    booking a service or listing your skills.</p><br>
+                <h3>Transparent Pricing:</h3><br>
+                <p> We believe in transparency, which is why our pricing is clear and upfront with no hidden charges.
+                </p><br>
+                <h3> Customer Support:</h3><br>
+                <p> Our dedicated customer support team is always ready to assist you with any queries or issues you may
+                    have.</p><br>
+                <h2>Why Choose Us? </h2><br>
+                <p>Find My Worker is not just another service platform. We are committed to making a difference by
+                    ensuring quality, reliability, and convenience. Our focus is on building a community where trust and
+                    satisfaction are paramount.</p>
+                </p>
+            </div>
+        </div>
+        <div class="fmy-logo">
+            <a href="" class="logo-img">
+                <img class="fmy-logo-img animate__animated animate__slideInRight" src={% static "photos/tred-Photoroom.png" %}
+                    alt="Find My Worker Logo"></a>
+        </div>
+    </div>
+    <hr class="line-break">
+    <div class="team">
+        <div class="team-1 member">
+            <img src="{% static 'photos/AKS_FSD.png' %}" alt="" class="mem">
+        </div>
+        <div class="team-2 member">
+            <img src="{% static 'photos/SAN_FED.png' %}" alt="" class="mem">
+        </div>
+        <div class="team-3 member">
+            <img src="{% static 'photos/KRISH_FED.png' %}" alt="" class="mem">  
+        </div>
+    </div>
+    <footer>
+        <div class="nav-footer">
+            <div class="nav-aboutus nav-footeritems"><a href={% url "about_us" %} target="_blank" class="nav-aboutus-a nav-a">ABOUT US</a></div>
+            <div class="nav-customer  nav-footeritems"><a href={% url "search_workers" %} class="nav-customer-a nav-a">CUSTOMER</a></div>
+            <div class="nav-worker  nav-footeritems"><a href={% url "register" %} class="nav-worker-a nav-a">WORKER</a></div>
+            <div class="nav-help  nav-footeritems"><a href={% url "contact_us" %} class="nav-help-a nav-a">HELP</a></div>
+            <div class="nav-contact  nav-footeritems"><a href={% url "contact_us" %} target="_self" class="nav-contact-a nav-a">CONTACT US</a></div>
+        </div>
+        <hr class="line-foot">
+        <div class="cont-foot">
+            <div class="foot-fmy"></div>
+        </div>
+        <div class="nav-footer-icons">
+            <a href={% url "home" %} class="text-white me-4">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href={% url "home" %} class="text-white me-4">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href={% url "home" %} class="text-white me-4">
+                <i class="fab fa-google"></i>
+            </a>
+            <a href={% url "home" %} class="text-white me-4">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href={% url "home" %} class="text-white me-4">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href={% url "home" %} class="text-white me-4">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <div class="copyright">
+            <p class="para-foot">© 2024 COPYRIGHT    :   <a class="nav-a" href="homepage.html">FIND MY WORKER</a></p>
+        </div>
+    </footer>
+</body>
