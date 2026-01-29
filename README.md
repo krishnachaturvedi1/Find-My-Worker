@@ -11,9 +11,9 @@
 
 ---
 
-## � Introduction
+## 📌 Introduction
 
-*Find My Worker* is a full-stack web application designed to connect customers with skilled workers in their area. The platform streamlines the process of finding, contacting, and hiring workers for various services, making it easier for both customers and workers to interact and manage their needs.
+**Find My Worker** is a full-stack web application designed to connect customers with skilled workers in their area. The platform streamlines the process of finding, contacting, and hiring workers for various services, making it easier for both customers and workers to interact and manage their needs.
 
 ---
 
@@ -31,42 +31,42 @@ Customers can search for workers based on their requirements, while workers can 
 
 ## ✨ Features
 
-- 🔍 *Search Workers:* Find workers by skill, location, and availability.
-- 👷 *Worker Dashboard:* Workers can manage their profiles and job requests.
-- 📝 *Customer Requests:* Customers can post requests and view worker profiles.
-- 📸 *Profile Photos:* Workers can upload and manage their photos.
-- 📊 *Admin Panel:* Manage users, workers, and requests via Django admin.
-- 📱 *Responsive Design:* Works seamlessly on desktop and mobile devices.
-- 🗂️ *Role-based Access:* Separate dashboards for customers, workers, and admins.
-- 📨 *Contact System:* Customers can contact workers directly through the platform.
+* 🔍 **Search Workers:** Find workers by skill, location, and availability
+* 👷 **Worker Dashboard:** Workers can manage their profiles and job requests
+* 📝 **Customer Requests:** Customers can post requests and view worker profiles
+* 📸 **Profile Photos:** Workers can upload and manage their photos
+* 📊 **Admin Panel:** Manage users, workers, and requests via Django admin
+* 📱 **Responsive Design:** Works seamlessly on desktop and mobile devices
+* 🗂️ **Role-based Access:** Separate dashboards for customers, workers, and admins
+* 📨 **Contact System:** Customers can contact workers directly through the platform
 
 ---
 
 ## 🌐 Live Demo
 
-> [Live Demo](https://find-my-worker-fmy.vercel.app/) <!-- Replace # with your deployed URL -->
+> 🔗 [https://find-my-worker-fmy.vercel.app/](https://find-my-worker-fmy.vercel.app/)
 
 ---
 
 ## 🛠️ Tech Stack
 
-- *Backend:* Django, SQLite
-- *Frontend:* HTML, CSS (custom styles), Django Templates
-- *Deployment:* Vercel (see vercel.json)
+* **Backend:** Django, SQLite
+* **Frontend:** HTML, CSS (custom styles), Django Templates
+* **Deployment:** Vercel (configured using `vercel.json`)
 
 ---
 
 ## 👤 User Roles
 
-- *Customer:* Search for workers, post requests, view worker profiles.
-- *Worker:* Register, manage profile, respond to job requests.
-- *Admin:* Manage users, workers, and requests via Django admin panel.
+* **Customer:** Search for workers, post requests, view worker profiles
+* **Worker:** Register, manage profile, respond to job requests
+* **Admin:** Manage users, workers, and requests via Django admin panel
 
 ---
 
 ## 📂 Folder Structure
 
-text
+```text
 Find_My_Worker/
 │   db.sqlite3
 │   manage.py
@@ -106,42 +106,52 @@ Find_My_Worker/
     ├── contact_us.html
     ├── layout.html
     └── layout_2.html
-
+```
 
 ---
 
 ## ⚙️ Getting Started
 
 ### 1. Clone the Repository
-bash
+
+```bash
 git clone https://github.com/exceptional007/Find-My-Worker.git
 cd Find-My-Worker/Find_My_Worker
-
+```
 
 ### 2. Create a Virtual Environment
-bash
-python -m venv venv
-venv\Scripts\activate  # On Windows
-# source venv/bin/activate  # On Linux/Mac
 
+```bash
+python -m venv venv
+venv\Scripts\activate      # On Windows
+# source venv/bin/activate  # On Linux/Mac
+```
 
 ### 3. Install Dependencies
-bash
-pip install -r requirements.txt
 
+```bash
+pip install -r requirements.txt
+```
 
 ### 4. Apply Migrations
-bash
-python manage.py migrate
 
+```bash
+python manage.py migrate
+```
 
 ### 5. Run the Development Server
-bash
-python manage.py runserver
 
+```bash
+python manage.py runserver
+```
 
 ### 6. Access the App
-Open your browser and go to [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+
+Open your browser and visit:
+
+```
+http://127.0.0.1:8000/
+```
 
 ---
 
@@ -156,28 +166,24 @@ Open your browser and go to [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
 ## 📚 API Endpoints (Sample)
 
-
-| Endpoint                | Method | Description                       |
-|-------------------------|--------|-----------------------------------|
-| /                     | GET    | Home page                         |
-| /customer/search/     | GET    | Search for workers                |
-| /worker/dashboard/    | GET    | Worker dashboard                  |
-| /admin/               | GET    | Django admin panel                |
+| Endpoint           | Method | Description        |
+| ------------------ | ------ | ------------------ |
+| /                  | GET    | Home page          |
+| /customer/search/  | GET    | Search for workers |
+| /worker/dashboard/ | GET    | Worker dashboard   |
+| /admin/            | GET    | Django admin panel |
 
 ---
 
 ## ❓ FAQ
 
-*Q: How do I register as a worker?*
-
+**Q: How do I register as a worker?**
 A: Go to the registration page and select the worker option. Fill in your details and submit the form.
 
-*Q: How can I contact a worker?*
-
+**Q: How can I contact a worker?**
 A: Use the search feature to find a worker and use the provided contact options on their profile.
 
-*Q: How do I contribute to this project?*
-
+**Q: How do I contribute to this project?**
 A: Fork the repository, make your changes, and submit a pull request.
 
 ---
@@ -190,29 +196,27 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 
 ## 📄 License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the **MIT License**.
 
 ---
 
 ## 🙏 Acknowledgements
 
-- [Django Documentation](https://docs.djangoproject.com/)
-- [Vercel](https://vercel.com/)
-- [Font Awesome](https://fontawesome.com/)
-- All contributors and open-source libraries used
+* Django Documentation
+* Vercel
+* Font Awesome
+* All contributors and open-source libraries used
 
 ---
 
 ## 📬 Contact
 
-- *Author:* Akshhat Srivastava
-- *GitHub:* [exceptional007](https://github.com/exceptional007)
-- *Email:* akshhatsri7843@gmail.com
+* **Author:** Akshhat Srivastava
+* **GitHub:** [https://github.com/exceptional007](https://github.com/exceptional007)
+* **Email:** [akshhatsri7843@gmail.com](mailto:akshhatsri7843@gmail.com)
 
 ---
 
 <p align="center">
   <b>Made with ❤️ using Django</b>
 </p>
-
----
