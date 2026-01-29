@@ -110,6 +110,51 @@ Find_My_Worker/
 
 ---
 
+## ⚙️ Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/exceptional007/Find-My-Worker.git
+cd Find-My-Worker/Find_My_Worker
+```
+
+### 2. Create a Virtual Environment
+
+```bash
+python -m venv venv
+venv\Scripts\activate      # On Windows
+# source venv/bin/activate  # On Linux/Mac
+```
+
+### 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Apply Migrations
+
+```bash
+python manage.py migrate
+```
+
+### 5. Run the Development Server
+
+```bash
+python manage.py runserver
+```
+
+### 6. Access the App
+
+Open your browser and visit:
+
+```
+http://127.0.0.1:8000/
+```
+
+---
+
 ## 🖼️ Screenshots
 
 <p align="center">
@@ -166,7 +211,7 @@ This project is licensed under the **MIT License**.
 
 ## 📬 Contact
 
-* **Author:** Krishna Chaturvedi
+* **Author:** Akshhat Srivastava
 * **GitHub:** [https://github.com/krishnachaturvedi1](https://github.com/krishnachaturvedi1)
 * **Email:** [chaturvedikrishna7652@gmail.com](mailto:chaturvedikrishna7652@gmail.com)
 
